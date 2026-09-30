@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <!-- Using text for simplicity, in a real app this would be an SVG for the Instagram logo -->
+                <h2>Instagram</h2>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                <a href="#" class="nav-item"><i class="fa-solid fa-magnifying-glass"></i><span>Search</span></a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-compass"></i><span>Explore</span></a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-message"></i><span>Messages</span></a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-heart"></i><span>Notifications</span></a>
+                <a href="#" class="nav-item"><i class="fa-regular fa-square-plus"></i><span>Create</span></a>
+                <a href="#" class="nav-item profile-link">
+                    <img src="https://i.pravatar.cc/150?img=11" alt="Profile Picture" class="nav-profile-pic">
+                    <span>Profile</span>
+                </a>
+            </div>
+            <div class="nav-footer">
+                <a href="#" class="nav-item"><i class="fa-solid fa-bars"></i><span>More</span></a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="feed">
+                <!-- Stories Section -->
+                <div class="stories-container">
+                    <div class="story">
+                        <div class="story-ring user-story">
+                            <img src="https://i.pravatar.cc/150?img=11" alt="Your Story">
+                            <i class="fa-solid fa-plus add-story-icon"></i>
+                        </div>
+                        <span>Your story</span>
+                    </div>
+                    <div class="story">
+                        <div class="story-ring">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Story">
+                        </div>
+                        <span>jane_doe</span>
+                    </div>
+                    <div class="story">
+                        <div class="story-ring">
+                            <img src="https://i.pravatar.cc/150?img=33" alt="Story">
+                        </div>
+                        <span>alex.dev</span>
+                    </div>
+                    <div class="story">
+                        <div class="story-ring">
+                            <img src="https://i.pravatar.cc/150?img=41" alt="Story">
+                        </div>
+                        <span>tech_guru</span>
+                    </div>
+                    <div class="story">
+                        <div class="story-ring">
+                            <img src="https://i.pravatar.cc/150?img=52" alt="Story">
+                        </div>
+                        <span>design_pro</span>
+                    </div>
+                    <div class="story">
+                        <div class="story-ring">
+                            <img src="https://i.pravatar.cc/150?img=63" alt="Story">
+                        </div>
+                        <span>traveler</span>
+                    </div>
+                </div>
+
+                <!-- Posts -->
+                <div class="posts">
+                    <!-- Post 1 -->
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-user-info">
+                                <div class="story-ring small-ring">
+                                    <img src="https://i.pravatar.cc/150?img=33" alt="User">
+                                </div>
+                                <div class="user-details">
+                                    <a href="#" class="username">alex.dev</a>
+                                    <span class="time">• 2h</span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis option-icon"></i>
+                        </header>
+                        
+                        <div class="post-content">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Post content">
+                        </div>
+
+                        <div class="post-footer">
+                            <div class="post-actions">
+                                <div class="left-actions">
+                                    <i class="fa-regular fa-heart action-icon like-btn"></i>
+                                    <i class="fa-regular fa-comment action-icon"></i>
+                                    <i class="fa-regular fa-paper-plane action-icon"></i>
+                                </div>
+                                <div class="right-actions">
+                                    <i class="fa-regular fa-bookmark action-icon save-btn"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="likes-count">
+                                <strong>1,245 likes</strong>
+                            </div>
+                            
+                            <div class="post-caption">
+                                <a href="#" class="username">alex.dev</a>
+                                <span>Late night coding session! 🚀 Working on some cool new features for the upcoming app release. #coding #developer #javascript</span>
+                            </div>
+                            
+                            <div class="comments">
+                                <a href="#" class="view-comments">View all 128 comments</a>
+                                
+                                <div class="add-comment">
+                                    <input type="text" placeholder="Add a comment...">
+                                    <button class="post-btn">Post</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="post-user-info">
+                                <div class="story-ring small-ring">
+                                    <img src="https://i.pravatar.cc/150?img=52" alt="User">
+                                </div>
+                                <div class="user-details">
+                                    <a href="#" class="username">design_pro</a>
+                                    <span class="time">• 5h</span>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis option-icon"></i>
+                        </header>
+                        
+                        <div class="post-content">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Post content">
+                        </div>
+
+                        <div class="post-footer">
+                            <div class="post-actions">
+                                <div class="left-actions">
+                                    <i class="fa-regular fa-heart action-icon like-btn"></i>
+                                    <i class="fa-regular fa-comment action-icon"></i>
+                                    <i class="fa-regular fa-paper-plane action-icon"></i>
+                                </div>
+                                <div class="right-actions">
+                                    <i class="fa-regular fa-bookmark action-icon save-btn"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="likes-count">
+                                <strong>8,902 likes</strong>
+                            </div>
+                            
+                            <div class="post-caption">
+                                <a href="#" class="username">design_pro</a>
+                                <span>Simplicity is the ultimate sophistication. ✨ #design #uiux #minimalism</span>
+                            </div>
+                            
+                            <div class="comments">
+                                <a href="#" class="view-comments">View all 89 comments</a>
+                                
+                                <div class="add-comment">
+                                    <input type="text" placeholder="Add a comment...">
+                                    <button class="post-btn">Post</button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Suggestions Sidebar -->
+            <aside class="suggestions-sidebar">
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?img=11" alt="Profile" class="profile-avatar">
+                    <div class="profile-info">
+                        <span class="username">sachin_dev</span>
+                        <span class="fullname">Sachin</span>
+                    </div>
+                    <button class="action-btn switch-btn">Switch</button>
+                </div>
+                
+                <div class="suggestions-header">
+                    <span class="title">Suggested for you</span>
+                    <button class="see-all">See All</button>
+                </div>
+                
+                <div class="suggestion-list">
+                    <!-- Suggestion Item -->
+                    <div class="suggestion-item">
+                        <div class="suggestion-user">
+                            <img src="https://i.pravatar.cc/150?img=65" alt="User" class="suggestion-avatar">
+                            <div class="suggestion-info">
+                                <span class="username">code_ninja</span>
+                                <span class="relation">Follows you</span>
+                            </div>
+                        </div>
+                        <button class="action-btn follow-btn">Follow</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <div class="suggestion-user">
+                            <img src="https://i.pravatar.cc/150?img=47" alt="User" class="suggestion-avatar">
+                            <div class="suggestion-info">
+                                <span class="username">startup_journey</span>
+                                <span class="relation">New to Instagram</span>
+                            </div>
+                        </div>
+                        <button class="action-btn follow-btn">Follow</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <div class="suggestion-user">
+                            <img src="https://i.pravatar.cc/150?img=28" alt="User" class="suggestion-avatar">
+                            <div class="suggestion-info">
+                                <span class="username">tech_news_daily</span>
+                                <span class="relation">Suggested for you</span>
+                            </div>
+                        </div>
+                        <button class="action-btn follow-btn">Follow</button>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Language</a></li>
+                    </ul>
+                    <span class="copyright">© 2026 INSTAGRAM CLONE BY SACHIN</span>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Bottom Navigation for Mobile -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active"><i class="fa-solid fa-house"></i></a>
+        <a href="#" class="nav-item"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" class="nav-item"><i class="fa-regular fa-square-plus"></i></a>
+        <a href="#" class="nav-item"><i class="fa-regular fa-heart"></i></a>
+        <a href="#" class="nav-item">
+            <img src="https://i.pravatar.cc/150?img=11" alt="Profile" class="nav-profile-pic">
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
