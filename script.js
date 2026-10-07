@@ -24,9 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const likesElement = this.closest('.post').querySelector('.likes-count strong');
                 if (likesElement) {
                     let currentLikesText = likesElement.innerText;
-                    let currentLikes = parseInt(currentLikesText.replace(/,/g, '').replace(' likes', ''));
+                    let hasPlus = currentLikesText.includes('+');
+                    let currentLikes = parseInt(currentLikesText.replace(/,/g, '').replace('+', '').replace(' likes', ''));
                     if (!isNaN(currentLikes)) {
-                        likesElement.innerText = (currentLikes + 1).toLocaleString() + ' likes';
+                        likesElement.innerText = (currentLikes + 1).toLocaleString() + (hasPlus ? '+' : '') + ' likes';
                     }
                 }
             } else {
@@ -39,9 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const likesElement = this.closest('.post').querySelector('.likes-count strong');
                 if (likesElement) {
                     let currentLikesText = likesElement.innerText;
-                    let currentLikes = parseInt(currentLikesText.replace(/,/g, '').replace(' likes', ''));
+                    let hasPlus = currentLikesText.includes('+');
+                    let currentLikes = parseInt(currentLikesText.replace(/,/g, '').replace('+', '').replace(' likes', ''));
                     if (!isNaN(currentLikes) && currentLikes > 0) {
-                        likesElement.innerText = (currentLikes - 1).toLocaleString() + ' likes';
+                        likesElement.innerText = (currentLikes - 1).toLocaleString() + (hasPlus ? '+' : '') + ' likes';
                     }
                 }
             }
