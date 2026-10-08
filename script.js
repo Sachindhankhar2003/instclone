@@ -151,17 +151,27 @@ document.addEventListener('DOMContentLoaded', () => {
             const commentText = input.value.trim();
             
             if (commentText) {
-                // Create a basic visual confirmation of comment posted
-                const inputParent = this.parentElement;
-                const originalPlaceholder = input.placeholder;
+                const commentsContainer = this.closest('.comments');
                 
+                // Create new comment element
+                const newComment = document.createElement('div');
+                newComment.style.marginTop = '8px';
+                newComment.style.marginBottom = '8px';
+                newComment.style.fontSize = '14px';
+                newComment.innerHTML = '<a href="#" class="username" style="font-weight: 600; margin-right: 5px; color: var(--text-color); text-decoration: none;">sachin_dev</a><span>' + commentText + '</span>';
+                
+                // Insert before the add-comment section
+                commentsContainer.insertBefore(newComment, input.closest('.add-comment'));
+
+                // Clear input
                 input.value = '';
-                input.placeholder = 'Comment posted...';
                 
-                // Change back after a second
+                // Opacity animation to make it look smooth
+                newComment.style.opacity = '0';
                 setTimeout(() => {
-                    input.placeholder = originalPlaceholder;
-                }, 2000);
+                    newComment.style.transition = 'opacity 0.3s ease';
+                    newComment.style.opacity = '1';
+                }, 10);
             }
         });
         
