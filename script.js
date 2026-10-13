@@ -2,6 +2,34 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // 0. Dark / Light Mode Toggle
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeToggleIcon = document.getElementById('themeToggleIcon');
+
+    // Apply saved theme preference on load
+    const savedTheme = localStorage.getItem('igCloneTheme');
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        themeToggleIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggleBtn.addEventListener('click', function () {
+        const isLight = document.body.classList.toggle('light-mode');
+
+        // Swap icon
+        if (isLight) {
+            themeToggleIcon.classList.replace('fa-moon', 'fa-sun');
+            localStorage.setItem('igCloneTheme', 'light');
+        } else {
+            themeToggleIcon.classList.replace('fa-sun', 'fa-moon');
+            localStorage.setItem('igCloneTheme', 'dark');
+        }
+
+        // Spin animation
+        themeToggleBtn.classList.add('spin');
+        setTimeout(() => themeToggleBtn.classList.remove('spin'), 400);
+    });
+
     // 1. Like Functionality
     const likeButtons = document.querySelectorAll('.like-btn');
     
